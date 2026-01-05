@@ -1,0 +1,309 @@
+.disaster-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.disaster-form-container .header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.disaster-form-container .header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.disaster-form-container .header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.disaster-form-container .card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+}
+
+.disaster-form-container .card h3 {
+  margin: 0 0 25px 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.disaster-form-container .form-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.disaster-form-container .form-section h4 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.disaster-form-container .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.disaster-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.disaster-form-container .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.disaster-form-container .form-control,
+.disaster-form-container .form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.disaster-form-container .form-control:focus,
+.disaster-form-container .form-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.disaster-form-container .form-control::placeholder {
+  color: #95a5a6;
+}
+
+.disaster-form-container .form-select {
+  cursor: pointer;
+}
+
+.disaster-form-container .form-select[multiple] {
+  height: auto;
+  min-height: 120px;
+}
+
+.disaster-form-container .file-upload {
+  border: 2px dashed #3498db;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.disaster-form-container .file-upload:hover {
+  border-color: #2980b9;
+  background: #ecf0f1;
+}
+
+.disaster-form-container .file-input {
+  display: none;
+}
+
+.disaster-form-container .file-upload p {
+  margin: 5px 0;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.disaster-form-container .file-hint {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+.disaster-form-container .files-selected {
+  font-size: 0.9rem;
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.disaster-form-container .file-upload.has-files {
+  border-color: #27ae60;
+  background: #d5f4e6;
+}
+
+.disaster-form-container .file-list {
+  margin-top: 15px;
+}
+
+.disaster-form-container .file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.disaster-form-container .file-item span {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.disaster-form-container .file-item button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.disaster-form-container .file-item button:hover {
+  background: #c0392b;
+}
+
+.disaster-form-container .progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.disaster-form-container .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  transition: width 0.3s ease;
+}
+
+.disaster-form-container .form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.disaster-form-container .btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.disaster-form-container .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.disaster-form-container .btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.disaster-form-container .btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.disaster-form-container .btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+}
+
+.disaster-form-container .btn-secondary {
+  background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+  color: white;
+}
+
+.disaster-form-container .btn-secondary:hover {
+  background: linear-gradient(135deg, #7f8c8d, #6c7b7d);
+}
+
+.disaster-form-container .loading {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .disaster-form-container {
+    padding: 15px;
+  }
+  
+  .disaster-form-container .header h1 {
+    font-size: 2rem;
+  }
+  
+  .disaster-form-container .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .disaster-form-container .form-actions {
+    flex-direction: column;
+  }
+  
+  .disaster-form-container .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .disaster-form-container .card {
+    padding: 20px;
+  }
+  
+  .disaster-form-container .form-section {
+    padding: 15px;
+  }
+  
+  .disaster-form-container .file-upload {
+    padding: 20px;
+  }
+}

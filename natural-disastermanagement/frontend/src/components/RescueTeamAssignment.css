@@ -1,0 +1,523 @@
+/* Rescue Team Assignment Container */
+.rescue-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header */
+.rescue-team-container .header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+.rescue-team-container .header h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.rescue-team-container .header p {
+  margin: 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #666;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #f5f5f5;
+  border-color: #667eea;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+/* Card */
+.rescue-team-container .card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h3 {
+  color: #333;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Disaster Grid */
+.disaster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.disaster-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.disaster-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.disaster-card.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+.disaster-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.disaster-card.selected .disaster-badge {
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.disaster-card h4 {
+  margin: 10px 0 8px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.disaster-card .severity {
+  font-weight: 600;
+  margin: 8px 0 5px 0;
+}
+
+.disaster-card .status {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin: 5px 0 0 0;
+}
+
+/* Teams Grid */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.team-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.team-card.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.team-header h4 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.team-card.selected .team-header h4 {
+  color: white;
+}
+
+.team-card .ngo-name {
+  color: #667eea;
+  font-weight: 600;
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+
+.team-card.selected .ngo-name {
+  color: white;
+  opacity: 0.95;
+}
+
+.team-card .specialization,
+.team-card .members,
+.team-card .experience {
+  margin: 6px 0;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.team-card.selected .specialization,
+.team-card.selected .members,
+.team-card.selected .experience {
+  color: white;
+  opacity: 0.95;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 0.85em;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.team-card.selected .contact-info {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.team-card.selected .contact-info p {
+  color: white;
+  opacity: 0.95;
+}
+
+.availability-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.availability-badge.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.availability-badge.busy {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.availability-badge.unavailable {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.team-card.selected .availability-badge {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Filter Group */
+.filter-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.form-control,
+.form-select {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
+}
+
+/* Action Section */
+.action-section {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc !important;
+}
+
+.btn:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  background: #999 !important;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.9em;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #c82333;
+  cursor: pointer;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85em;
+}
+
+/* Assigned Teams List */
+.assigned-teams-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.assigned-team-item {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-info h5 {
+  margin: 0 0 5px 0;
+  color: #155724;
+  font-size: 1.1em;
+}
+
+.team-info p {
+  margin: 3px 0;
+  color: #155724;
+  font-size: 0.9em;
+}
+
+.team-info .spec {
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+/* Teams List */
+.teams-list {
+  display: grid;
+  gap: 12px;
+}
+
+.team-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.team-list-item:hover {
+  background: #e9ecef;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.team-details h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.team-details p {
+  margin: 3px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.text-muted {
+  color: #888 !important;
+}
+
+.contact {
+  margin-top: 8px !important;
+  font-weight: 500 !important;
+  color: #667eea !important;
+}
+
+.assigned-count {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* No Data Message */
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 1.1em;
+  background: #f8f9fa;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rescue-team-container {
+    padding: 15px;
+  }
+
+  .rescue-team-container .header {
+    padding: 30px 20px;
+  }
+
+  .rescue-team-container .header h1 {
+    font-size: 1.8em;
+  }
+
+  .disaster-grid,
+  .teams-grid,
+  .assigned-teams-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-navigation {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    grid-template-columns: 1fr;
+  }
+
+  .team-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .action-section {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
